@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="registerApp" >
+<head >
+	<meta charset="utf-8">
+	<title>Register</title>
+	<script type="text/javascript" src="js/angular.min.js" ></script>
+	<script type="text/javascript" src="js/controller/register.js" ></script>
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	
+</head>
+<body >
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(assets/image/register.jpg);">
+					<span class="login100-form-title-1">
+						Register
+					</span>
+				</div>
+
+				<form ng-controller="registerController" class="login100-form validate-form ">
+					<div class="wrap-input100 validate-input m-b-26">
+						<span class="label-input100">Username</span>
+						<input  ng-model="user.name" class="input100" name="username" type="text" placeholder="Enter username" required >
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-26">
+						<span class="label-input100">Email</span>
+						<input ng-model="user.email" class="input100" name="email" type="email" placeholder="Enter email address"  required>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18">
+						<span class="label-input100">Password</span>
+						<input ng-model="user.password" class="input100" name="pass"  type="password" placeholder="Enter password" required>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18">
+						<span class="label-input100">Re-Password</span>
+						<input ng-model="user.repassword" class="input100" type="password" name="repass" placeholder="Retype password" required>
+					</div>
+
+					
+
+					<div class="container-login100-form-btn">
+						<button  ng-click="register(user)" class="login100-form-btn " >Register</button>
+						<a href="/footballnewsfe" style=" font-size: 17px; text-decoration: none;">
+								Cancel
+						</a>
+						<p id="demo"></p>	
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
