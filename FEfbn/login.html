@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="loginApp">
+<head>
+	<meta charset="utf-8">
+	<title>Register</title>
+	<script type="text/javascript" src="javascript/angularjs/angular.min.js" ></script>
+	<script type="text/javascript" src="javascript/app/controllers/register.js" ></script>
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(assets/image/register.jpg);">
+					<span class="login100-form-title-1">
+						Login
+					</span>
+				</div>
+
+				<form ng-controller="registerController" class="login100-form validate-form ">
+					<div class="wrap-input100 validate-input m-b-26">
+						<span class="label-input100">Username</span>
+						<input  ng-model="user.name" class="input100" name="username" type="text" placeholder="Enter username" required >
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18">
+						<span class="label-input100">Password</span>
+						<input ng-model="user.password" class="input100" name="pass"  type="password" placeholder="Enter password" required>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button  ng-click="register(user)" class="login100-form-btn " >Login</button>
+						<a href="index.html" style=" font-size: 17px; text-decoration: none;">
+								Cancel
+						</a>
+						<p id="demo"></p>	
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
