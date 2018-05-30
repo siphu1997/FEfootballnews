@@ -7,17 +7,14 @@ angular.module('registerApp', []).controller('registerController', ['$scope','$h
 	
 	$scope.register = function(){
 		var userDTO = {
-			"username" : $scope.user.name,
+			"username" : $scope.user.username,
 			"email" : $scope.user.email,
-			"name"	: $scope.user.password
+			"password"	: $scope.user.password
 		}
 		if($scope.user.password == $scope.user.repassword) {
-			//var myjson = JSON.stringify(userDTO);
-			//document.getElementById("demo").innerHTML = myjson;
-		}
-		else alert("Mật khẩu không trùng nhau.") ;
-
-		var config = {
+			
+			//Post data
+			var config = {
 			headers : {
 				'Content-Type': 'application/json;charset=utf-8;'
 			}
@@ -34,6 +31,11 @@ angular.module('registerApp', []).controller('registerController', ['$scope','$h
 		function (error){
 			console.log(error);
    		});
+
+		}
+		else alert("Mật khẩu không trùng nhau.") ;
+
+		
 
    		
 }}])

@@ -3,8 +3,8 @@
 <head >
 	<meta charset="utf-8">
 	<title>Register</title>
-	<script type="text/javascript" src="js/angular.min.js" ></script>
-	<script type="text/javascript" src="js/controller/register.js" ></script>
+	<script type="text/javascript" src="javascript/angularjs/angular.min.js" ></script>
+	<script type="text/javascript" src="javascript/app/controllers/register.js" ></script>
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/register.css">
 	
@@ -22,7 +22,7 @@
 				<form ng-controller="registerController" class="login100-form validate-form ">
 					<div class="wrap-input100 validate-input m-b-26">
 						<span class="label-input100">Username</span>
-						<input  ng-model="user.name" class="input100" name="username" type="text" placeholder="Enter username" required >
+						<input  ng-model="user.username" class="input100" name="username" type="text" placeholder="Enter username" required >
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-26">
@@ -44,7 +44,7 @@
 
 					<div class="container-login100-form-btn">
 						<button  ng-click="register(user)" class="login100-form-btn " >Register</button>
-						<a href="/footballnewsfe" style=" font-size: 17px; text-decoration: none;">
+						<a href="index.html" style=" font-size: 17px; text-decoration: none;">
 								Cancel
 						</a>
 						<p id="demo"></p>	
